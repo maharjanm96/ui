@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @apply mx-auto w-full max-w-[theme(screens.xl)] px-[max(theme(padding.5),5vw)] xl:px-5;
+}
+
+.title {
+  @apply font-black tracking-tighter lowercase;
+}
+
+.overlap {
+  display: grid;
+  grid-template-areas: 'overlap';
+}
+
+.inline-overlap {
+  display: inline-grid;
+  grid-template-areas: 'overlap';
+}
+
+.overlap > :not(.absolute),
+.inline-overlap > :not(.absolute),
+.overlap-item,
+.inline-overlap-item {
+  grid-area: overlap;
+}
